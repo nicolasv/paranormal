@@ -96,7 +96,11 @@ export default class App extends React.Component<AppProps> {
             })}
           </NavSelect>
         </NavBar>
-        <ExampleFrame src={this.state.active} />
+        <ExampleFrame
+          srcdoc={
+            this.props.examples.find(e => e.href === this.state.active).html
+          }
+        />
       </Container>
     );
   }

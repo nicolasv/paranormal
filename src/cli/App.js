@@ -25,6 +25,7 @@ export default class App {
       return {
         title: example.title,
         href: path.relative(this.tempDir, example.htmlPath),
+        html: example.htmlContent,
       };
     });
 
